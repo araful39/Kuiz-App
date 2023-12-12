@@ -4,8 +4,12 @@ import 'package:flutter/material.dart';
 class Math extends StatefulWidget {
   const Math({super.key});
 
+  Math.fromJson(v);
+
   @override
   State<Math> createState() => _MathState();
+
+  toJson() {}
 }
 
 class _MathState extends State<Math> {

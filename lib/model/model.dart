@@ -1,7 +1,14 @@
+import 'package:kuiz/pagese/english/english_homepage.dart';
+import 'package:kuiz/pagese/ict.dart';
+import 'package:kuiz/pagese/math.dart';
+
 class KuizModel {
   List<Bangla>? bangla;
+  List<English>? english;
+  List<Ict>? ict;
+  List<Math>? math;
 
-  KuizModel({this.bangla});
+  KuizModel({this.bangla, this.english, this.ict, this.math});
 
   KuizModel.fromJson(Map<String, dynamic> json) {
     if (json['bangla'] != null) {
@@ -10,12 +17,39 @@ class KuizModel {
         bangla!.add(new Bangla.fromJson(v));
       });
     }
+    if (json['english'] != null) {
+      english = <English>[];
+      json['english'].forEach((v) {
+        english!.add(new English.fromJson(v));
+      });
+    }
+    if (json['ict'] != null) {
+      ict = <Ict>[];
+      json['ict'].forEach((v) {
+        ict!.add(new Ict.fromJson(v));
+      });
+    }
+    if (json['math'] != null) {
+      math = <Math>[];
+      json['math'].forEach((v) {
+        math!.add(new Math.fromJson(v));
+      });
+    }
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.bangla != null) {
       data['bangla'] = this.bangla!.map((v) => v.toJson()).toList();
+    }
+    if (this.english != null) {
+      data['english'] = this.english!.map((v) => v.toJson()).toList();
+    }
+    if (this.ict != null) {
+      data['ict'] = this.ict!.map((v) => v.toJson()).toList();
+    }
+    if (this.math != null) {
+      data['math'] = this.math!.map((v) => v.toJson()).toList();
     }
     return data;
   }

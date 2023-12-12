@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kuiz/list/all_list.dart';
-import 'package:kuiz/pagese/bangla/bangla.dart';
-import 'package:kuiz/pagese/english.dart';
+import 'package:kuiz/pagese/bangla/bangla_homepage.dart';
+import 'package:kuiz/pagese/english/english_homepage.dart';
 import 'package:kuiz/pagese/ict.dart';
 import 'package:kuiz/pagese/math.dart';
 import 'package:kuiz/pagese/physics.dart';
@@ -12,6 +11,7 @@ import 'package:kuiz/pagese/result.dart';
 import '../pagese/biology.dart';
 import '../pagese/chemistry.dart';
 import 'custom_widget/homepage_widget.dart';
+import 'list/all_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
           );
         },
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
 
       ),
     );

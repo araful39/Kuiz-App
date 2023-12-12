@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:kuiz/api/total_api.dart';
 
 import 'package:kuiz/model/model.dart';
-
-Widget custombangla(String question ,String a,String b ,String c,String d,BuildContext context){
+Widget custombangla(String question1 ,String a,String b ,String c,String d,BuildContext context,Color colors){
 
  Apiclass _apiclas=Apiclass();
   return   Column(
@@ -16,8 +15,8 @@ Widget custombangla(String question ,String a,String b ,String c,String d,BuildC
         height: 50,
         width: MediaQuery.of(context).size.width*0.9,
         child: Card(
-          color: Colors.indigo,
-          child: Center(child: Text(question,style: TextStyle(color: Colors.white),)),
+          color: colors,
+          child: Center(child: Text(question1,style: TextStyle(color: Colors.white),)),
         ),
       ),
       SizedBox(height: 20,),
@@ -29,17 +28,17 @@ Widget custombangla(String question ,String a,String b ,String c,String d,BuildC
             children: [
               SizedBox(
                 height: 50,
-                width: 120,
+                width: 150,
                 child: Card(
-                  color: Colors.indigo,
+                  color: colors,
                   child: Center(child: Text(a,style: TextStyle(color: Colors.white),)),
                 ),
               ),
               SizedBox(
                 height: 50,
-                width: 120,
+                width: 150,
                 child: Card(
-                  color: Colors.indigo,
+                  color: colors,
                   child: Center(child: Text(b,style: TextStyle(color: Colors.white),)),
                 ),
               ),
@@ -51,17 +50,17 @@ Widget custombangla(String question ,String a,String b ,String c,String d,BuildC
             children: [
               SizedBox(
                 height: 50,
-                width: 120,
+                width: 150,
                 child: Card(
-                  color: Colors.indigo,
+                  color: colors,
                   child: Center(child: Text(c,style: TextStyle(color: Colors.white),)),
                 ),
               ),
               SizedBox(
                 height: 50,
-                width: 120,
+                width: 150,
                 child: Card(
-                  color: Colors.indigo,
+                  color:colors,
                   child: Center(child: Text(d,style: TextStyle(color: Colors.white),)),
                 ),
               ),

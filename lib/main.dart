@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kuiz/pagese/bangla/bangla.dart';
+import 'package:kuiz/pagese/bangla/bangla_homepage.dart';
 import 'package:kuiz/pagese/splash_sceen.dart';
 
 
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Bangla(),
+      home: SplashSceen(),
     );
   }
 }
